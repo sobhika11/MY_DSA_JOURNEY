@@ -1,0 +1,35 @@
+class Solution {
+    public boolean isCycle(int V, int[][] edges) {
+        // Code here
+    ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
+    for(int i=0;i<V;i++)
+        adj.add(new ArrayList<>());
+    for(int []e:edges)
+    {
+        adj.get(e[0]).add(e[1]);
+        adj.get(e[1]).add(e[0]);
+    }
+    boolean vis[]=new boolean[V];
+    for(int i=0;i<V;i++){
+        if(!vis[i]){
+            Queue<int []>q=new LinkedList<>();
+            q.add(new int[]{i,-1});
+            vis[i]=true;
+            while(!q.isEmpty()){
+                int[] ch=q.poll();
+                vis[ch[0]]=true;
+                for(int nd:adj.get(ch[0])){
+                if(!vis[nd]){
+                    q.add(new int[]{nd,ch[0]});
+                    
+                }
+                else if(vis[nd] && ch[1]!=nd)
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+    
+    }
+}
