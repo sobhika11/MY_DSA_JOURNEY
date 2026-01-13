@@ -2,6 +2,8 @@
 
 // User function Template for Java
 
+import java.util.ArrayList;
+
 class Solution {
 
     ArrayList<Integer> search(String pat, String txt) {

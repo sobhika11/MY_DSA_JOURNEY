@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class Solution {
     static char nonRepeatingChar(String s) {
         // code here
