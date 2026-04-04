@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 class Solution {
     public int count(int a[]){
         int c=0;

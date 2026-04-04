@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public static int LCS(String s1,String s2,int i,int j,int dp[][]){
         if(i==-1 || j==-1)
